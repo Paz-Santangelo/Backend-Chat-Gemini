@@ -19,7 +19,6 @@ public class AiController {
 
     @PostMapping("/gemini")
     public ResponseEntity<String> sendQuestion(@RequestBody Map<String, String> payload) {
-
         String question = payload.get("question");
         String answer = aiService.getAnswer(question);
         return ResponseEntity.ok(answer);
